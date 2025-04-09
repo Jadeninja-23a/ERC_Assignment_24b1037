@@ -26,6 +26,10 @@ To get back m(t), we multiply the result by 2 and subtract 1.
 
 1. **Load and Visualize Audio**  
 Used scipy.io.wavfile to read the .wav file and extract the audio signal as a long array of samples. Visualized the waveform using matplotlib.
+
+![image](https://github.com/user-attachments/assets/511ec21d-f000-43aa-ae21-10e4014b43df)
+
+
 ![image](https://github.com/user-attachments/assets/b923f232-d45c-45cc-be22-259e37e3207f)
 
 
