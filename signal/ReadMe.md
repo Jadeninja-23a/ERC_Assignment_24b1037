@@ -26,19 +26,22 @@ To get back m(t), we multiply the result by 2 and subtract 1.
 
 1. **Load and Visualize Audio**  
 Used scipy.io.wavfile to read the .wav file and extract the audio signal as a long array of samples. Visualized the waveform using matplotlib.
+![image](https://github.com/user-attachments/assets/b923f232-d45c-45cc-be22-259e37e3207f)
 
-2. **FFT Analysis**  
+
+
+3. **FFT Analysis**  
 Used numpy.fft.fft() to analyze the signal in the frequency domain and find the carrier frequency. The frequency with the highest magnitude came out to be around 10,582 Hz, so that was taken as the carrier frequency f_c.
 
-3. **Demodulation**  
+4. **Demodulation**  
 Multiplied the modulated signal by cos(2πf_c t) and applied a low-pass filter using scipy.signal.butter() and filtfilt() to remove the high-frequency component.  
 Then scaled the result using:
     recovered = 2 * filtered - 1
 
-4. **Filtering**  
+5. **Filtering**  
 Applied a bandpass filter around the audio bandwidth to remove background noise and unwanted frequencies before or after demodulation.
 
-5. **Plotting**  
+6. **Plotting**  
 Used matplotlib to generate the following plots:
 - Original AM signal
 - Noisy demodulated signal
